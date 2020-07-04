@@ -1,4 +1,4 @@
-#!/home/lowkeyshift/Documents/yt_videos/Python/real_world_python_tuts/venv/bin/python3
+#!/home/path/to/venv/bin/python3
 
 import grp, os, pwd, socket, sys, time
 from host_scan import HostScan as hs
@@ -37,7 +37,7 @@ while True:
     hs_out = hs.localhost(hostname = socket.gethostname())
     ds_out = ds.localdisk(hostname = socket.gethostname())
 
-    with open('/home/lowkeyshift/Documents/yt_videos/Python/real_world_python_tuts/agent_log', 'a') as f:
+    with open('/path/to/workingdir', 'a') as f:
         sys.stdout = f
         print("Collected Metadata at {}".format(starttime))
         print(hs_out)
