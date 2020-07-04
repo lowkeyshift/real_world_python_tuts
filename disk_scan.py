@@ -1,3 +1,5 @@
+#!/home/lowkeyshift/Documents/yt_videos/Python/real_world_python_tuts/venv/bin/python3
+
 import socket
 from subprocess import check_output
 from itertools import zip_longest
@@ -22,6 +24,4 @@ class DiskScan():
                 "mountpoint": mountpoint,
                 "tags": tags
             })
-            print(data)
-
-DiskScan.localdisk(hostname = socket.gethostname())
+            return data

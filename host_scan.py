@@ -1,3 +1,5 @@
+#!/home/lowkeyshift/Documents/yt_videos/Python/real_world_python_tuts/venv/bin/python3
+
 import socket, re, uuid
 from sys import platform
 from netifaces import (
@@ -26,11 +28,9 @@ class HostScan():
             "hostname": hostname,
             "os": os,
             "fqdn": fqdn,
-            "mac": mac,
+            #"mac": mac,
             "ipaddr": ip_list[0],
             "tags": tags
         }
-        print(h_data)
-
-HostScan.localhost(hostname = socket.gethostname())
+        return h_data
 

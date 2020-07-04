@@ -1,3 +1,5 @@
+#!/home/lowkeyshift/Documents/yt_videos/Python/real_world_python_tuts/venv/bin/python3
+
 import grp, os, pwd, socket, sys, time
 from host_scan import HostScan as hs
 from disk_scan import DiskScan as ds
@@ -31,7 +33,15 @@ drop_privileges(uid='lowkeyshift', gid='lowkeyshift')
 
 starttime = time.time()
 while True:
+    orginal_stdout = sys.stdout
     hs_out = hs.localhost(hostname = socket.gethostname())
     ds_out = ds.localdisk(hostname = socket.gethostname())
+
+    with open('/home/lowkeyshift/Documents/yt_videos/Python/real_world_python_tuts/agent_log', 'a') as f:
+        sys.stdout = f
+        print("Collected Metadata at {}".format(starttime))
+        print(hs_out)
+        print(ds_out)
+        sys.stdout = orginal_stdout
     time.sleep(5 - starttime % 5)
     pass
