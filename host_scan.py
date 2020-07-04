@@ -1,4 +1,4 @@
-#!/home/lowkeyshift/Documents/yt_videos/Python/real_world_python_tuts/venv/bin/python3
+#!/home/path/to/venv/bin/python3
 
 import socket, re, uuid
 from sys import platform
