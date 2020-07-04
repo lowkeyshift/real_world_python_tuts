@@ -1,4 +1,4 @@
-#!/home/lowkeyshift/Documents/yt_videos/Python/real_world_python_tuts/venv/bin/python3
+#!/home/path/to/venv/bin/python3
 
 import socket
 from subprocess import check_output
