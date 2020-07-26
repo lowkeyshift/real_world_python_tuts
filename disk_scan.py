@@ -24,4 +24,4 @@ class DiskScan():
                 "mountpoint": mountpoint,
                 "tags": tags
             })
-            return data
+        return data
